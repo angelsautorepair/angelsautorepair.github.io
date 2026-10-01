@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angel's Auto Repair | Family-Owned Auto Repair in Goleta, CA</title>
+<meta name="description" content="Family-owned auto repair in Goleta, CA since 2016. Oil changes, brakes, diagnostics, engine replacement and transmission rebuilds for all makes and models, Teslas and EVs included. 5940 Matthews St. Call (805) 696-3860.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Angel's Auto Repair",
+  "telephone": "+1-805-696-3860",
+  "description": "Family-owned auto repair shop in Goleta, California, founded in 2016 by Angel and his sons Alan and Angel Jr. Services all makes and models.",
+  "foundingDate": "2016",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61569377487013",
+    "https://www.yelp.com/biz/angel-s-auto-repair-goleta",
+    "https://local.yahoo.com/info-234274247-angels-auto-repair-goleta/",
+    "https://maps.roadtrippers.com/us/goleta-ca/services/angel-s-auto-repair-goleta",
+    "https://www.bbb.org/us/ca/goleta/profile/auto-repair/angels-auto-repair-1236-92104580"
+  ],
+  "geo": { "@type": "GeoCoordinates", "latitude": 34.430526, "longitude": -119.829682 },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5940 Matthews St",
+    "addressLocality": "Goleta",
+    "addressRegion": "CA",
+    "postalCode": "93117",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "16:00" }
+  ]
+}
+</script>
+<style>
+  :root {
+    /* Palette pulled from the logo: charcoal, off-white, plus one amber signal */
+    --dark: #2B2728;          /* = average colour of the logo image background */
+    --dark-deep: #201D1E;
+    --on-dark: #F6F6F6;       /* = the white used in the logo artwork */
+    --on-dark-muted: #BDB6B3;
+    --paper: #EFEDEA;
+    --on-paper: #221E1F;
+    --muted: #5B5553;
+    --line: #CFCAC5;
+    --amber: #FFC20E;           /* one amber for stars, bars, accents */
+    --card: #FAF9F7;
+    --radius: 16px;
+    --focus: #0B57D0;
+    --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #151213;
+      --on-paper: #ECE9E6;
+      --muted: #ABA5A2;
+      --line: #342F30;
+      --card: #1D1A1B;
+      --focus: #8AB4F8;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #151213;
+    --on-paper: #ECE9E6;
+    --muted: #ABA5A2;
+    --line: #342F30;
+      --card: #1D1A1B;
+    --focus: #8AB4F8;
+  }
+
+  [hidden] { display: none !important; }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { background: var(--dark); scroll-padding-top: calc(4.5rem + env(safe-area-inset-top, 0px)); scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--on-paper);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  .wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+
+  .dark {
+    --focus: #FFC533;
+    background: var(--dark);
+    color: var(--on-dark);
+  }
+
+  /* Display type: heavy condensed caps, like the logo */
+  h1, h2, h3, .btn, .nav a {
+    font-family: var(--display);
+    text-transform: uppercase;
+  }
+  h2.title {
+    font-weight: 900; font-size: clamp(2.3rem, 5.4vw, 3.9rem);
+    line-height: 0.95; letter-spacing: 0.005em; margin: 0 0 1rem; max-width: 16ch;
+  }
+
+  /* Nav bar */
+  .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; border-bottom: 1px solid rgba(244,242,239,0.14); }
+  .bar .wrap { display: flex; align-items: center; gap: 1.25rem; padding-block: 0.7rem; }
+  .bar.dark { background: rgba(43,39,40,0.82); -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%); }
+  .brand { font-family: var(--display); font-weight: 900; font-size: 1.45rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; line-height: 1; margin-right: auto; white-space: nowrap; }
+  .nav { display: flex; gap: 1.75rem; }
+  .nav a {
+    text-decoration: none; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.1em;
+    padding-block: 0.4rem; border-bottom: 2px solid transparent;
+  }
+  .nav a:hover, .nav a.active { border-bottom-color: var(--amber); }
+  .menu-btn { display: none; background: none; border: 0; color: inherit; padding: 0.5rem; margin-right: -0.5rem; cursor: pointer; }
+  .menu-btn svg { display: block; width: 1.75rem; height: 1.75rem; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; fill: none; }
+  .menu-btn .x, .menu-btn[aria-expanded="true"] .bars { display: none; }
+  .menu-btn[aria-expanded="true"] .x { display: block; }
+
+  .eyebrow { display: flex; align-items: center; gap: 0.7rem; margin: 0 0 0.8rem; font-family: var(--display); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .eyebrow::before { content: ""; width: 1.75rem; height: 3px; border-radius: 2px; background: var(--amber); }
+  .dark .eyebrow { color: var(--amber); }
+
+  /* Buttons */
+  .btn {
+    display: inline-block; font-weight: 800; font-size: 1.2rem; letter-spacing: 0.08em;
+    padding: 0.75rem 1.5rem 0.7rem; text-decoration: none; border: 2px solid currentColor;
+    border-radius: 999px; line-height: 1.1; text-align: center;
+    transition: background 0.15s, color 0.15s, transform 0.15s, box-shadow 0.15s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-amber { background: var(--amber); color: #1D1A1B; border-color: var(--amber); }
+  .btn-amber:hover { background: transparent; color: var(--amber); }
+  .btn-light { background: var(--on-dark); color: var(--dark); border-color: var(--on-dark); }
+  .btn-light:hover { background: transparent; color: var(--on-dark); }
+  .btn-ghost { background: transparent; color: var(--on-dark); }
+  .btn-ghost:hover { background: var(--on-dark); color: var(--dark); }
+  .btn-ink { background: var(--on-paper); color: var(--paper); border-color: var(--on-paper); }
+  .btn-ink:hover { background: transparent; color: var(--on-paper); }
+  .btn-line { background: transparent; color: var(--on-paper); }
+  .btn-line:hover { background: var(--on-paper); color: var(--paper); }
+  .btn-sm { padding: 0.55rem 1.1rem 0.5rem; font-size: 1.05rem; }
+
+  /* Winged banner: the logo's AUTO + REPAIR bar, reused */
+  .wingbar {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--on-dark); color: var(--dark);
+    padding: 0.7rem 1.6rem 0.9rem;
+    clip-path: polygon(0 0, 100% 0, 100% 58%, 98% 100%, 2% 100%, 0 58%);
+  }
+  .wingbar.inv { background: var(--dark); color: var(--on-dark); }
+  .wing { flex: 1; display: flex; flex-direction: column; gap: 3px; min-width: 1.5rem; }
+  .wing.l { align-items: flex-start; }
+  .wing.r { align-items: flex-end; }
+  .wing i { display: block; height: 2px; background: currentColor; }
+  .wing i:nth-child(1) { width: 100%; }
+  .wing i:nth-child(2) { width: 80%; }
+  .wing i:nth-child(3) { width: 60%; }
+  .star { width: 0.7em; height: 0.7em; flex: none; fill: currentColor; }
+  .wingbar .txt {
+    margin: 0; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.35rem 0.9rem;
+    font-family: var(--display); font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.16em; font-size: clamp(1rem, 2.1vw, 1.4rem); line-height: 1.2; text-align: center;
+  }
+  .wingbar .txt a { text-decoration: none; }
+  .wingbar .txt a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+  /* Hero */
+  .hero { padding-top: clamp(2.5rem, 6vw, 4.5rem); padding-bottom: clamp(2.25rem, 5vw, 3.5rem); }
+  .hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+  h1 { margin: 0 0 1.4rem; line-height: 0; }
+  .logo { display: block; width: min(100%, 640px); height: auto; aspect-ratio: 3150 / 876; color: var(--on-dark); }
+  .tagline {
+    font-family: var(--display); font-weight: 800; text-transform: uppercase;
+    font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.02; letter-spacing: 0.02em;
+    margin: 0 0 1rem; max-width: 20ch;
+  }
+  .lede { font-size: 1.15rem; max-width: 34rem; margin: 0 0 1.75rem; color: var(--on-dark-muted); }
+  .lede strong { color: var(--on-dark); font-weight: 600; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 1.5rem 0 0; padding: 0; }
+  .chips li { border: 1px solid rgba(244,242,239,0.2); border-radius: 999px; padding: 0.3rem 0.9rem; font-size: 0.95rem; color: var(--on-dark-muted); }
+  .hero .wrap > .wingbar { margin-top: clamp(2.25rem, 5vw, 3.5rem); }
+
+  /* Hours sign */
+  .sign { background: #F1EFEC; color: #221E1F; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
+  .sign .wingbar { border-radius: 0; padding: 0.6rem 1.25rem 0.8rem; }
+  .sign .txt { font-size: 1.5rem; font-weight: 900; }
+  .sign-body { padding: 1.1rem 1.5rem 1.4rem; }
+  .status { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.9rem; font-weight: 600; }
+  .dot { width: 0.7rem; height: 0.7rem; border-radius: 50%; background: #8C8582; flex: none; }
+  .dot.open { background: #E9A800; box-shadow: 0 0 0 3px rgba(233,168,0,0.28); }
+  .sign table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .sign th, .sign td { text-align: left; font-weight: 500; padding: 0.4rem 0; border-top: 1px solid #CFCAC5; font-size: 1rem; }
+  .sign td { text-align: right; }
+  .sign tr.today th, .sign tr.today td { font-weight: 700; }
+
+  /* Sections */
+  section { padding-block: clamp(3.25rem, 7.5vw, 6rem); }
+  .intro { max-width: 36rem; color: var(--muted); margin: 0 0 2.25rem; }
+  .dark .intro { color: var(--on-dark-muted); }
+
+  /* Services */
+  .svc-list { list-style: none; margin: 0 0 1.25rem; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; counter-reset: svc; }
+  .svc-list li {
+    counter-increment: svc; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: inset 0 4px 0 var(--amber); padding: 1.6rem 1.4rem 1.3rem;
+    font-family: var(--display); font-weight: 800; text-transform: uppercase;
+    font-size: 1.5rem; letter-spacing: 0.03em; line-height: 1.12;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .svc-list li::before { content: counter(svc, decimal-leading-zero); display: block; margin-bottom: 0.5rem; font-size: 0.95rem; letter-spacing: 0.15em; color: var(--muted); }
+  .svc-list li:hover { transform: translateY(-3px); box-shadow: inset 0 4px 0 var(--amber), 0 12px 28px rgba(0,0,0,0.12); }
+  .ev { display: flex; align-items: center; gap: 1.1rem; background: var(--dark); color: var(--on-dark); padding: 1.3rem 1.6rem; border-radius: var(--radius); }
+  .ev p { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 1.6rem; letter-spacing: 0.04em; line-height: 1.1; }
+  .bolt { width: 2.6rem; height: 2.6rem; padding: 0.6rem; flex: none; border-radius: 50%; background: var(--amber); fill: #1D1A1B; }
+
+  /* About + ratings */
+  .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+  .about p { margin: 0 0 1rem; max-width: 36rem; }
+  .note, .ratings { position: relative; overflow: hidden; background: rgba(244,242,239,0.05); border: 1px solid rgba(244,242,239,0.1); border-radius: var(--radius); }
+  .note::before, .ratings::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 8px; background: var(--amber); }
+  .note { margin: 1.75rem 0 0; padding: 1.3rem 1.5rem 1.3rem 2rem; max-width: 36rem; }
+  .note p { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: 1.5rem; line-height: 1.15; letter-spacing: 0.03em; margin: 0 0 0.5rem; color: var(--on-dark); }
+  .note cite { font-style: normal; font-weight: 600; color: var(--amber); }
+  .ratings { padding: 1.9rem 1.75rem 1.6rem 2.4rem; }
+  .score { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin: 0; }
+  .score .num { font-family: var(--display); font-weight: 900; font-size: 5rem; line-height: 0.9; }
+  .score .stars { color: var(--amber); font-size: 1.7rem; letter-spacing: 0.12em; text-shadow: 0 0 18px rgba(255,194,14,0.45); }
+  .basis { margin: 0.6rem 0 1.25rem !important; color: var(--on-dark-muted); }
+  .sites { list-style: none; margin: 0 0 1rem; padding: 0; }
+  .sites li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-top: 1px solid rgba(244,242,239,0.2); }
+  .sites a { font-weight: 600; text-underline-offset: 3px; }
+  .sites span { color: var(--on-dark-muted); text-align: right; }
+  .ratings .fine { margin: 0; font-size: 0.9rem; color: var(--on-dark-muted); }
+
+  /* Find us */
+  .visit-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; margin-top: 1.75rem; }
+  address { font-style: normal; font-size: 1.3rem; line-height: 1.4; margin-bottom: 1.5rem; }
+  .phone {
+    font-family: var(--display); font-weight: 900; font-size: clamp(2.6rem, 6vw, 4rem);
+    line-height: 1; letter-spacing: 0.01em; text-decoration: none; display: inline-block; margin: 0 0 1.25rem;
+  }
+  .phone:hover { text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 4px; text-underline-offset: 8px; }
+  .visit p { margin: 0; }
+  .visit .cross { color: var(--muted); margin: -1rem 0 1.5rem; }
+  .visit .lbl { color: var(--muted); margin-bottom: 0.3rem; }
+  .es { color: var(--muted); margin-top: 1.1rem !important; }
+
+  .mapbox {
+    position: relative; aspect-ratio: 4 / 3; min-height: 300px; border-radius: var(--radius); overflow: hidden;
+    width: 100%; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.12); background-color: var(--dark); color: var(--on-dark);
+    background-image: linear-gradient(rgba(244,242,239,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(244,242,239,0.07) 1px, transparent 1px);
+    background-size: 38px 38px;
+  }
+  .visit-grid > div, .about-grid > div { min-width: 0; }
+  .mapbox iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #e9e6df; }
+  .mapfallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; text-align: center; padding: 1rem; }
+  .mapfallback svg { width: 3rem; height: 3rem; fill: var(--amber); }
+  .mapfallback b { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.08em; font-size: 1.5rem; font-weight: 800; }
+  .mapfallback span { color: var(--on-dark-muted); }
+  .attrib { font-size: 0.8rem; color: var(--muted); margin: 0.4rem 0 1.25rem !important; }
+  .apps-label { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; font-size: 1.1rem; margin: 0 0 0.6rem !important; }
+  .apps { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+  /* Booking */
+  .booking-embed { position: relative; min-height: 720px; border-radius: 20px; overflow: hidden; background: var(--dark); color: var(--on-dark); box-shadow: 0 16px 40px rgba(0,0,0,0.18); }
+  .booking-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .booking-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; padding: 1.5rem; text-align: center; }
+  .booking-fallback svg { width: 3rem; height: 3rem; color: var(--amber); }
+  .booking-fallback b { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.08em; font-size: 1.5rem; font-weight: 800; }
+  .booking-fallback span { max-width: 26rem; color: var(--on-dark-muted); }
+
+  /* Scroll reveal (only when JS is running) */
+  .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } .btn, .svc-list li { transition: none; } }
+
+  footer { background: var(--dark-deep); color: var(--on-dark-muted); padding-block: 1.6rem; font-size: 0.95rem; }
+  footer .social { display: inline-flex; align-items: center; gap: 0.5rem; }
+  footer .social svg { width: 1.2rem; height: 1.2rem; fill: currentColor; }
+  footer a:hover { color: var(--on-dark); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem 2rem; }
+
+  @media (max-width: 880px) {
+    .hero-grid, .about-grid, .visit-grid { grid-template-columns: 1fr; }
+    .svc-list { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 820px) {
+    .menu-btn { display: block; }
+    .nav {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; padding: 0.5rem 1.25rem 1rem;
+      background: var(--dark); border-bottom: 1px solid rgba(244,242,239,0.14);
+    }
+    .nav.open { display: flex; }
+    .nav a { padding-block: 0.85rem; font-size: 1.3rem; border-bottom: 1px solid rgba(244,242,239,0.14); }
+    .nav a:hover, .nav a.active { border-bottom-color: var(--amber); }
+  }
+  @media (max-width: 560px) {
+    .brand { font-size: 1.2rem; }
+    .bar .wrap { gap: 0.75rem; }
+    .bar .hide-sm { display: none; }
+    .svc-list { grid-template-columns: 1fr; }
+    .booking-embed { min-height: 640px; }
+    .mapbox { aspect-ratio: auto; height: 300px; min-height: 0; }
+    .actions .btn { flex: 1 1 100%; }
+    .hero .wingbar .wing { display: none; }
+    .hero .wingbar { clip-path: none; padding: 0.8rem 1rem; border-radius: 4px; }
+    .wingbar .txt { letter-spacing: 0.1em; }
+  }
+</style>
+</head>
+<body id="top">
+
+<header class="bar dark">
+  <div class="wrap">
+    <a class="brand" href="#top">Angel's Auto Repair</a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#about">Our story</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Book</a>
+      <a href="#visit">Find us</a>
+    </nav>
+    <a class="btn btn-light btn-sm" href="tel:+18056963860">Call now</a>
+    <a class="btn btn-amber btn-sm hide-sm" href="#book">Book</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="hero dark">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <h1>
+            <svg class="logo" viewBox="30 30 3150 876" role="img" aria-label="Angel's Auto Repair" fill="currentColor"><path fill-rule="evenodd" d="M355.50,892.96C348.90,892.66 342.55,891.89 341.40,891.25C340.24,890.61 336.19,889.23 332.38,888.17C320.22,884.80 306.32,872.97 296.71,857.80C291.27,849.24 291.46,849.30 268.00,848.71C236.79,847.92 227.94,845.01 212.18,830.32C207.20,825.68 203.68,821.29 201.15,816.59C195.17,805.43 195.38,805.51 171.68,805.42C146.02,805.33 138.66,803.71 126.50,795.52C110.69,784.88 104.94,778.04 98.95,762.79L95.70,754.50L94.99,729.59C94.21,702.60 94.28,701.60 97.31,698.25L99.35,696.00L1600.60,696.02C2658.96,696.04 3102.75,696.37 3104.90,697.12C3109.10,698.58 3110.00,702.48 3109.95,719.00C3109.88,741.97 3108.57,757.28 3106.32,761.65C3105.23,763.77 3102.91,768.20 3101.18,771.50C3095.72,781.88 3084.04,793.23 3073.50,798.37C3061.42,804.27 3057.88,804.89 3033.93,805.36C3008.78,805.86 3009.07,805.75 3002.64,817.20C2997.07,827.12 2986.54,836.95 2975.52,842.50C2966.94,846.82 2952.04,848.98 2930.72,848.99C2913.82,849.00 2911.23,849.85 2908.16,856.39C2906.96,858.93 2904.50,862.70 2902.68,864.76C2900.86,866.82 2898.38,869.93 2897.17,871.68C2891.47,879.91 2875.02,888.50 2859.00,891.62C2851.46,893.09 387.50,894.40 355.50,892.96ZM978.20,854.14C990.59,849.87 994.23,846.79 997.79,837.50L1000.48,830.50L1000.79,785.23L1001.11,739.96L998.13,736.98C995.44,734.29 994.53,734.00 988.66,734.00C975.28,734.00 975.83,731.87 976.10,781.81C976.39,835.83 976.86,834.71 953.50,835.76C935.02,836.59 927.50,833.73 924.98,824.93C924.41,822.95 924.00,804.55 924.00,781.21C924.00,736.21 923.99,736.14 917.48,733.99C912.29,732.28 904.75,733.57 901.85,736.66L899.50,739.16L899.61,785.33L899.72,831.50L902.38,837.97C906.92,849.02 911.55,852.00 932.50,857.34C933.60,857.62 942.15,857.76 951.50,857.66C967.93,857.48 968.83,857.36 978.20,854.14ZM1334.00,855.31C1337.58,854.14 1342.30,852.71 1344.50,852.13C1353.55,849.73 1361.26,838.24 1363.06,824.48C1364.83,810.89 1364.45,773.11 1362.45,763.39C1357.45,739.19 1347.77,733.57 1311.00,733.53C1271.94,733.48 1262.43,739.09 1257.03,765.37C1254.12,779.52 1254.06,815.68 1256.93,825.14C1257.99,828.64 1259.38,833.48 1260.01,835.91C1261.80,842.74 1270.67,851.55 1277.17,852.94C1279.91,853.53 1283.13,854.54 1284.33,855.18C1291.02,858.78 1323.14,858.86 1334.00,855.31ZM727.77,854.79C729.27,854.08 731.17,851.99 732.00,850.13C740.08,832.00 737.81,833.19 764.58,833.09C789.66,833.01 790.07,833.15 793.02,843.05C796.26,853.94 802.12,858.22 811.68,856.66C820.63,855.21 820.98,850.33 813.62,829.00C812.77,826.52 811.19,821.80 810.12,818.50C809.05,815.20 806.51,808.00 804.49,802.50C802.47,797.00 800.00,789.58 799.00,786.00C796.97,778.70 791.26,762.08 788.18,754.50C787.07,751.75 785.66,747.61 785.05,745.29C784.44,742.98 782.44,739.49 780.60,737.54L777.26,734.00L764.38,734.00C747.34,734.00 745.18,734.97 742.85,743.69C741.93,747.10 740.84,750.45 740.41,751.14C739.99,751.83 738.85,755.12 737.88,758.45C736.92,761.78 734.25,769.67 731.95,776.00C729.66,782.33 726.96,790.50 725.96,794.18C724.95,797.85 723.49,802.12 722.71,803.68C721.93,805.23 720.74,809.42 720.06,813.00C719.38,816.58 718.00,820.85 716.99,822.50C715.98,824.15 714.59,827.75 713.90,830.50C713.22,833.25 711.61,837.75 710.34,840.50C706.61,848.55 707.83,855.17 713.26,856.35C716.71,857.10 724.73,856.24 727.77,854.79ZM1136.39,855.87C1140.74,853.89 1140.94,851.74 1141.23,804.78C1141.56,751.04 1139.50,756.70 1158.93,756.00C1170.39,755.59 1173.14,755.19 1174.77,753.71C1177.16,751.55 1178.17,745.19 1176.87,740.49C1175.04,733.86 1176.08,734.00 1129.73,734.00L1087.90,734.00L1085.45,736.65C1083.56,738.69 1083.00,740.38 1083.00,744.10C1083.00,754.31 1085.72,756.00 1102.15,756.00C1118.51,756.00 1117.00,751.02 1117.00,804.89C1117.00,846.18 1117.14,849.95 1118.75,851.86C1122.67,856.52 1130.86,858.39 1136.39,855.87ZM1590.91,855.55C1595.40,853.22 1596.17,849.87 1595.82,834.04C1595.40,815.09 1594.36,815.98 1616.86,816.06C1642.61,816.14 1643.96,817.22 1644.97,838.69C1645.70,854.03 1647.05,856.09 1656.94,856.80C1662.78,857.22 1663.07,857.13 1666.63,853.57L1670.31,849.89L1669.68,835.49C1669.04,820.67 1667.85,815.60 1664.02,811.51C1659.22,806.39 1659.44,802.71 1664.88,797.28C1673.71,788.45 1672.71,752.66 1663.36,742.83C1656.20,735.29 1648.13,734.00 1608.33,734.00C1588.92,734.00 1576.14,734.39 1574.97,735.02C1571.57,736.84 1571.23,742.68 1571.37,797.33L1571.50,851.16L1574.77,854.08C1578.53,857.45 1585.93,858.12 1590.91,855.55ZM1837.10,854.74C1842.39,851.14 1843.74,842.65 1839.66,838.57C1836.97,835.87 1814.90,834.22 1795.76,835.27C1781.24,836.07 1781.33,836.20 1781.79,816.25C1782.08,803.48 1782.91,802.68 1795.35,803.11C1818.88,803.92 1831.71,803.15 1834.51,800.75C1838.49,797.32 1839.05,790.96 1835.67,787.58L1833.09,785.00L1809.55,785.00C1780.02,785.00 1781.81,786.03 1782.22,769.25C1782.58,754.08 1780.67,755.03 1810.68,755.01C1823.58,755.01 1835.03,754.56 1836.48,754.01C1842.21,751.83 1843.40,741.31 1838.48,736.39L1836.09,734.00L1798.07,734.00L1760.05,734.00L1758.27,736.71C1755.24,741.33 1755.57,850.02 1758.63,853.07C1762.09,856.53 1765.86,856.85 1801.00,856.67C1831.18,856.52 1834.76,856.33 1837.10,854.74ZM1946.81,853.64C1949.46,851.00 1949.50,850.75 1949.82,835.57C1950.25,814.89 1947.82,816.57 1977.76,816.25C2004.78,815.95 2008.23,815.04 2016.12,806.11C2021.77,799.72 2022.50,796.17 2022.48,775.50C2022.45,754.98 2021.63,751.90 2014.01,743.63C2006.03,734.96 2000.02,733.90 1959.09,733.89C1930.60,733.88 1929.61,733.95 1927.59,735.97C1925.53,738.03 1925.50,738.82 1925.22,793.24C1925.02,832.29 1925.26,849.22 1926.05,851.13C1928.67,857.45 1941.46,858.99 1946.81,853.64ZM2109.23,855.95C2113.94,854.65 2117.30,850.29 2119.50,842.68C2122.18,833.39 2123.28,833.01 2147.35,833.00C2172.84,833.00 2175.42,834.05 2177.53,845.29C2178.93,852.79 2184.77,857.00 2193.75,857.00C2203.66,857.00 2205.99,849.83 2200.12,837.41C2198.53,834.05 2196.76,829.10 2196.18,826.41C2195.59,823.71 2191.90,812.05 2187.96,800.50C2184.02,788.95 2178.14,771.40 2174.88,761.50C2165.45,732.80 2166.70,734.04 2147.15,734.01L2133.80,734.00L2130.50,737.30C2128.26,739.54 2126.53,742.82 2125.10,747.55C2123.94,751.37 2122.36,756.08 2121.58,758.00C2120.80,759.92 2118.28,767.58 2115.96,775.00C2113.65,782.42 2109.61,794.58 2106.98,802.00C2094.12,838.30 2090.82,851.99 2094.25,854.77C2096.98,856.98 2103.63,857.51 2109.23,855.95ZM2306.85,855.57C2312.11,852.86 2312.11,852.89 2311.95,795.10C2311.78,737.01 2311.67,735.71 2306.54,734.42C2300.46,732.90 2290.87,734.45 2288.37,737.36L2286.00,740.11L2286.00,794.94C2286.00,847.05 2286.09,849.89 2287.87,852.09C2291.46,856.53 2301.47,858.36 2306.85,855.57ZM2418.45,855.58C2423.52,853.47 2424.00,851.69 2424.00,835.22C2424.00,815.69 2423.09,816.61 2442.79,816.17C2469.38,815.58 2473.00,818.61 2473.00,841.54C2473.00,851.05 2473.05,851.24 2476.11,854.10C2479.78,857.53 2485.49,857.99 2492.01,855.38C2497.57,853.15 2498.00,851.89 2498.00,837.72C2498.00,823.10 2496.69,817.79 2491.61,811.86C2486.97,806.43 2486.94,803.42 2491.49,799.01C2497.43,793.25 2498.51,788.79 2498.40,770.48C2498.27,751.36 2495.84,745.15 2486.01,738.76C2479.88,734.77 2455.11,732.81 2422.67,733.75C2402.91,734.32 2402.83,734.33 2401.20,736.81C2399.74,739.05 2399.58,745.08 2399.67,795.21L2399.76,851.12L2402.00,853.50C2405.36,857.08 2412.66,858.00 2418.45,855.58ZM2806.00,847.75C2853.10,847.52 2856.75,847.37 2860.28,845.62C2867.70,841.93 2871.20,833.75 2867.10,829.66L2864.94,827.50L2728.44,827.24L2591.94,826.97L2589.47,829.44C2584.28,834.63 2586.41,846.18 2592.82,847.59C2594.29,847.91 2595.84,848.25 2596.25,848.34C2597.05,848.51 2722.52,848.16 2806.00,847.75ZM615.05,845.40C620.11,840.33 618.35,829.78 612.13,827.93C606.18,826.16 339.82,827.08 337.65,828.87C333.29,832.50 337.70,841.66 345.90,846.02C349.40,847.87 353.31,847.92 481.22,847.71L612.94,847.50L615.05,845.40ZM1293.50,834.44C1283.45,831.34 1281.44,825.86 1280.48,799.00C1279.87,782.13 1280.00,779.69 1281.98,771.29C1285.63,755.79 1288.53,754.34 1314.00,755.27C1338.36,756.17 1338.35,756.16 1338.81,791.17C1339.25,823.77 1338.05,829.18 1329.46,833.44C1324.09,836.10 1300.97,836.75 1293.50,834.44ZM1471.93,816.94C1473.54,814.71 1475.15,811.61 1475.49,810.05C1476.33,806.23 1478.77,804.15 1487.31,800.00C1497.36,795.11 1497.34,792.90 1487.20,787.92C1478.32,783.55 1477.55,782.81 1473.62,774.83C1469.20,765.86 1465.05,765.92 1462.13,775.00C1460.00,781.60 1457.49,784.54 1452.38,786.45C1439.75,791.14 1437.38,795.50 1445.75,798.59C1454.58,801.86 1458.22,804.97 1461.00,811.65C1465.46,822.32 1467.36,823.25 1471.93,816.94ZM750.00,813.74C746.05,811.66 747.53,800.85 753.87,785.50C755.01,782.75 756.62,778.00 757.44,774.94C758.99,769.22 762.73,762.66 764.50,762.56C766.06,762.47 769.34,770.12 774.94,786.91C784.00,814.07 783.90,814.38 765.33,814.78C756.19,814.97 751.78,814.67 750.00,813.74ZM2132.75,813.99C2130.39,812.52 2130.45,804.80 2132.88,799.46C2134.61,795.66 2138.78,782.67 2142.42,769.77C2144.53,762.30 2147.31,760.50 2150.69,764.42C2151.96,765.90 2153.00,767.94 2153.00,768.94C2153.00,771.29 2162.30,799.46 2164.49,803.76C2166.21,807.13 2165.85,812.36 2163.81,813.62C2161.87,814.82 2134.60,815.14 2132.75,813.99ZM452.30,805.01L613.09,805.00L615.55,802.55C617.51,800.58 618.00,799.07 618.00,795.00C618.00,790.93 617.51,789.42 615.55,787.45L613.09,785.00L443.30,784.77C244.12,784.49 242.21,784.51 239.62,787.01C236.16,790.34 240.10,797.09 248.86,802.83C251.40,804.49 279.01,806.29 288.00,805.38C289.93,805.18 363.86,805.02 452.30,805.01ZM2955.70,802.41C2964.86,797.99 2968.66,790.71 2964.01,786.51C2960.72,783.54 2591.49,784.08 2588.50,787.06C2586.02,789.54 2586.05,800.48 2588.55,802.98C2590.21,804.64 2748.82,805.83 2886.50,805.21L2950.50,804.93L2955.70,802.41ZM1954.32,795.05C1950.58,793.45 1950.00,790.79 1950.00,775.18C1950.00,754.47 1948.82,755.59 1970.63,755.54C1995.97,755.48 1998.50,757.45 1997.82,776.68C1997.48,786.56 1996.37,789.14 1990.62,793.44C1987.55,795.73 1958.89,797.00 1954.32,795.05ZM1602.35,794.38C1597.37,793.24 1596.52,790.76 1596.17,776.28C1595.66,755.44 1594.94,756.12 1618.00,755.77C1643.77,755.38 1646.72,757.65 1645.78,777.20C1645.21,788.87 1643.73,791.25 1635.97,792.91C1630.64,794.06 1605.71,795.14 1602.35,794.38ZM2434.67,794.08C2424.00,793.29 2424.00,793.28 2424.00,775.24C2424.00,754.71 2423.77,754.89 2449.15,755.56C2471.51,756.15 2472.86,757.11 2473.76,772.97C2474.85,792.28 2467.05,796.50 2434.67,794.08ZM614.88,758.61C617.60,756.15 618.44,751.34 617.04,746.17C614.95,738.38 637.11,739.03 377.90,739.16L145.63,739.28L143.31,741.60C137.48,747.43 143.07,755.68 155.50,759.60C163.10,761.99 612.21,761.03 614.88,758.61ZM3054.22,758.32C3062.07,754.69 3066.25,743.81 3060.89,740.94C3057.99,739.39 2593.72,739.54 2590.82,741.10C2584.30,744.59 2585.41,757.14 2592.50,760.06C2593.60,760.51 2696.88,760.80 2822.00,760.69L3049.50,760.50L3054.22,758.32ZM1401.00,589.93C1376.92,588.64 1362.00,587.17 1356.00,585.50C1352.97,584.65 1346.67,583.13 1342.00,582.12C1302.75,573.62 1267.44,550.67 1246.88,520.30C1244.19,516.33 1242.00,512.86 1242.00,512.58C1242.00,512.30 1240.68,509.98 1239.06,507.43C1235.69,502.12 1226.59,479.71 1225.09,473.00C1224.53,470.52 1222.96,464.79 1221.59,460.26C1220.23,455.73 1218.63,447.86 1218.04,442.76C1217.46,437.67 1216.52,431.70 1215.97,429.50C1213.11,418.13 1212.17,333.82 1214.04,257.50C1215.45,200.02 1217.71,183.26 1227.48,157.50C1228.73,154.20 1230.09,149.94 1230.51,148.02C1234.73,128.51 1262.05,94.01 1285.50,78.59C1317.51,57.54 1341.80,49.89 1392.00,45.08C1397.78,44.52 1407.00,43.59 1412.50,43.01C1428.28,41.34 1528.42,41.65 1552.50,43.45C1589.19,46.19 1620.62,52.32 1630.30,58.62C1632.40,59.99 1637.35,62.64 1641.30,64.53C1670.61,78.52 1688.35,101.20 1697.50,136.39C1698.80,141.42 1700.33,146.74 1700.89,148.21C1701.45,149.68 1702.38,156.34 1702.96,163.01C1703.54,169.68 1704.64,178.82 1705.41,183.32C1708.92,203.90 1708.42,211.57 1703.42,213.85C1699.08,215.83 1566.09,215.45 1563.23,213.45C1560.20,211.33 1559.32,209.42 1557.64,201.36C1552.65,177.42 1540.79,168.87 1507.04,164.86C1473.01,160.82 1427.73,163.23 1410.50,170.00C1406.65,171.52 1402.08,173.06 1400.35,173.44C1395.40,174.50 1382.26,184.08 1378.91,189.07C1364.01,211.26 1361.50,231.13 1362.28,321.00C1363.29,438.12 1368.60,453.77 1411.01,464.75L1425.50,468.50L1462.50,468.41C1510.68,468.29 1524.23,465.98 1540.31,455.13C1554.06,445.85 1558.48,437.97 1560.54,419.12C1563.39,392.99 1562.77,383.42 1558.11,381.41C1557.22,381.03 1538.03,380.82 1515.45,380.94C1470.83,381.18 1467.68,380.96 1465.34,377.40C1462.72,373.40 1462.86,285.92 1465.49,283.01L1467.38,280.92L1584.94,281.21C1711.64,281.52 1706.20,281.28 1707.74,286.78C1709.11,291.67 1708.65,440.39 1707.24,450.50C1699.44,506.30 1688.24,529.54 1656.88,555.00C1638.71,569.75 1619.03,577.93 1590.56,582.58C1585.09,583.48 1578.34,584.80 1575.56,585.51C1572.78,586.23 1561.95,587.32 1551.50,587.95C1541.05,588.57 1526.42,589.48 1519.00,589.98C1502.39,591.10 1422.15,591.06 1401.00,589.93ZM2891.00,590.03C2883.57,589.62 2870.30,588.96 2861.50,588.57C2846.57,587.91 2833.15,585.96 2805.69,580.45C2737.12,566.68 2707.94,525.19 2707.61,441.00L2707.50,414.50L2711.00,412.75C2714.94,410.78 2834.25,410.00 2839.28,411.92C2842.56,413.16 2843.74,416.68 2845.02,429.00C2848.03,457.97 2858.00,470.22 2882.00,474.44C2896.65,477.01 2972.65,477.86 2986.29,475.60C3016.34,470.64 3026.60,456.98 3026.30,422.35C3025.95,382.16 3017.61,376.71 2950.00,372.49C2805.65,363.49 2773.42,356.17 2739.35,324.66C2727.88,314.06 2715.54,287.40 2713.02,267.79C2712.51,263.78 2711.40,256.92 2710.55,252.54C2706.12,229.58 2706.14,187.47 2710.60,157.50C2713.12,140.56 2713.56,138.33 2716.93,126.00C2722.81,104.45 2742.34,79.13 2760.63,69.36C2764.41,67.34 2768.67,64.88 2770.10,63.88C2776.88,59.18 2805.22,50.87 2821.00,48.97C2826.22,48.34 2837.22,46.94 2845.43,45.86C2884.39,40.72 2981.09,40.47 3024.50,45.38C3060.00,49.40 3086.21,55.90 3095.17,62.91C3096.45,63.91 3099.82,65.90 3102.65,67.33C3113.38,72.75 3128.65,89.70 3139.29,108.02C3148.96,124.66 3154.94,155.84 3154.98,189.82C3155.00,210.57 3154.66,212.23 3150.03,213.84C3146.40,215.10 3027.08,215.43 3022.50,214.18C3018.34,213.06 3016.90,209.47 3016.00,197.97C3013.89,171.09 3002.95,158.17 2980.38,155.88C2975.85,155.42 2970.20,154.59 2967.82,154.03C2956.09,151.27 2923.20,151.93 2896.00,155.47C2865.26,159.47 2855.13,170.26 2854.23,200.00C2853.55,222.29 2856.71,233.72 2865.96,242.36C2873.08,249.03 2881.68,251.00 2910.00,252.48C2927.14,253.37 2956.02,255.77 2964.50,257.01C2968.35,257.57 2980.50,258.45 2991.50,258.96C3002.50,259.47 3017.80,260.78 3025.50,261.86C3033.20,262.95 3043.55,264.13 3048.50,264.48C3056.93,265.08 3074.44,268.59 3083.50,271.49C3092.31,274.32 3108.65,280.28 3111.49,281.71C3157.49,304.84 3171.22,338.68 3169.64,425.00C3168.59,482.29 3164.29,504.47 3149.22,530.13C3144.10,538.85 3130.29,552.79 3120.57,559.05C3115.58,562.26 3110.35,565.78 3108.95,566.86C3104.54,570.25 3083.09,577.57 3066.00,581.50C3062.97,582.20 3057.84,583.49 3054.59,584.37C3051.34,585.25 3043.91,586.43 3038.09,586.99C3032.26,587.55 3022.32,588.49 3016.00,589.09C3002.16,590.40 2910.00,591.09 2891.00,590.03ZM42.30,586.78C38.64,585.05 39.36,577.42 44.55,563.00C47.82,553.90 53.50,535.09 56.02,525.00C57.19,520.33 61.21,507.05 64.96,495.50C71.85,474.27 72.42,472.29 76.10,457.00C77.23,452.32 79.07,446.25 80.20,443.50C81.34,440.75 82.93,435.80 83.76,432.50C84.58,429.20 86.27,423.57 87.52,420.00C88.76,416.43 91.00,409.23 92.49,404.00C93.97,398.77 96.25,391.12 97.54,387.00C102.66,370.72 107.14,355.50 108.40,350.13C109.58,345.11 113.33,332.74 116.16,324.50C118.89,316.58 123.45,301.65 125.48,294.00C127.88,284.98 131.99,271.09 134.95,262.00C137.99,252.69 143.76,233.15 147.50,219.50C151.86,203.60 156.56,188.25 159.19,181.28C160.28,178.41 161.75,173.68 162.46,170.78C164.26,163.42 173.20,133.33 176.79,122.50C179.86,113.28 182.14,105.42 187.10,87.00C188.66,81.22 191.33,72.67 193.03,68.00C194.74,63.33 196.77,57.44 197.56,54.91C200.26,46.19 189.62,46.98 306.60,46.87C363.74,46.81 412.17,46.82 414.21,46.89C420.46,47.08 421.17,48.32 427.51,70.00C429.35,76.33 432.22,85.78 433.87,91.00C435.52,96.22 437.58,103.56 438.43,107.29C439.29,111.02 440.65,115.37 441.47,116.94C442.28,118.51 443.42,121.98 444.01,124.65C444.59,127.32 445.91,131.75 446.94,134.50C447.96,137.25 450.02,143.78 451.52,149.00C453.01,154.22 457.29,168.18 461.02,180.00C467.64,200.99 471.48,213.87 474.41,225.00C476.78,234.02 481.58,249.35 482.70,251.50C483.28,252.60 485.62,259.80 487.91,267.50C492.53,283.06 496.92,297.66 499.50,306.00C500.43,309.02 502.09,314.43 503.19,318.00C504.30,321.57 506.92,330.80 509.02,338.50C515.21,361.17 517.08,367.30 518.96,371.00C519.94,372.93 522.42,380.57 524.46,388.00C526.51,395.43 530.00,406.85 532.23,413.40C534.46,419.94 537.73,430.52 539.50,436.90C545.13,457.24 547.20,464.13 552.66,480.76C555.60,489.70 557.99,497.57 557.97,498.26C557.94,499.76 563.61,518.54 569.67,537.00C572.11,544.42 574.95,553.65 575.99,557.50C577.03,561.35 578.80,567.64 579.94,571.48C582.68,580.76 582.63,584.59 579.75,586.26C575.92,588.48 442.30,588.08 438.87,585.83C436.93,584.56 435.56,581.76 433.14,574.13C431.39,568.61 429.54,563.84 429.04,563.52C428.53,563.21 427.81,560.83 427.43,558.23C427.05,555.63 425.71,550.80 424.45,547.50C423.19,544.20 419.59,532.27 416.46,521.00C410.51,499.58 408.97,496.47 403.13,494.05C401.26,493.28 373.73,493.04 309.81,493.23L219.13,493.50L216.12,496.38C213.64,498.76 212.65,501.21 210.46,510.35C209.00,516.45 207.14,523.10 206.33,525.14C204.84,528.86 203.18,534.81 198.43,553.50C192.67,576.17 189.80,584.15 186.71,586.03C183.26,588.13 46.64,588.83 42.30,586.78ZM621.80,586.88C620.31,586.32 618.77,584.88 618.37,583.68C617.98,582.48 617.71,462.03 617.77,316.00L617.88,50.50L620.25,48.70C622.50,46.98 628.52,46.89 741.36,46.84C874.15,46.78 862.62,46.12 865.07,53.87C865.70,55.87 867.28,59.98 868.57,63.00C874.15,76.04 885.98,107.21 888.44,115.33C889.91,120.19 892.68,127.73 894.60,132.09C897.75,139.26 904.36,156.68 910.51,174.00C911.77,177.57 913.80,182.75 915.02,185.50C916.23,188.25 918.72,194.78 920.55,200.00C925.45,213.98 928.78,222.93 930.97,228.00C937.89,244.07 939.50,248.19 941.11,254.00C943.56,262.88 948.20,275.60 950.89,280.82C952.11,283.20 955.60,292.65 958.64,301.82C961.68,311.00 965.30,320.59 966.69,323.15C968.08,325.71 970.24,330.66 971.49,334.15C982.41,364.58 985.71,373.87 991.35,390.00C994.91,400.18 998.71,411.20 999.81,414.50C1005.03,430.19 1011.35,446.67 1012.75,448.25C1017.16,453.20 1019.26,448.74 1018.66,435.70C1013.53,322.40 1011.60,54.19 1015.89,48.89L1017.77,46.56L1059.14,46.72C1081.89,46.81 1112.49,46.91 1127.14,46.94C1150.97,46.99 1154.00,47.18 1155.92,48.75L1158.05,50.50L1158.08,142.00C1158.09,192.33 1158.07,312.16 1158.05,408.30L1158.00,583.09L1155.64,585.45L1153.29,587.80L1035.26,587.93C949.38,588.03 916.56,587.76 914.75,586.93C912.18,585.76 908.65,579.18 905.14,569.00C901.88,559.53 900.83,556.65 898.77,551.50C893.36,537.99 887.14,521.20 883.04,509.00C882.02,505.98 879.53,499.68 877.51,495.00C873.75,486.28 867.89,470.11 865.51,461.87C864.78,459.32 863.50,455.94 862.68,454.35C860.52,450.16 854.06,433.65 851.41,425.51C847.78,414.34 844.40,405.00 841.46,398.00C837.69,389.04 831.14,371.43 829.54,366.00C828.82,363.52 827.11,359.02 825.76,356.00C824.40,352.98 821.37,345.10 819.02,338.50C812.01,318.83 811.39,317.15 805.18,301.00C801.90,292.48 798.89,283.93 798.50,282.00C798.11,280.07 796.97,277.15 795.98,275.50C794.98,273.85 793.46,269.77 792.60,266.44C791.74,263.10 789.49,257.02 787.60,252.93C785.71,248.83 782.56,240.03 780.61,233.38C778.66,226.72 775.77,217.50 774.19,212.89C772.60,208.28 769.17,198.20 766.55,190.50C761.51,175.67 759.72,172.85 757.05,175.54C754.97,177.63 756.04,236.22 759.01,282.75C759.62,292.32 760.15,357.29 760.30,440.70L760.56,582.40L758.45,584.85L756.34,587.30L690.42,587.59C647.69,587.78 623.55,587.53 621.80,586.88ZM1771.02,587.11C1763.41,586.07 1764.03,610.10 1764.01,316.25C1764.00,52.32 1764.01,50.99 1766.00,49.00C1767.73,47.27 1769.38,46.99 1778.25,46.94C1783.89,46.90 1870.14,46.88 1969.92,46.88C2148.56,46.89 2151.36,46.92 2153.28,48.84C2155.70,51.26 2156.27,158.77 2153.88,161.65C2150.64,165.55 2152.14,165.50 2032.00,165.57C1908.36,165.64 1911.74,165.51 1910.20,170.31C1908.46,175.73 1910.41,276.84 1912.28,278.72C1913.88,280.32 1916.65,280.53 1939.13,280.80L1964.19,281.10L1970.35,278.07C1973.73,276.41 1978.61,273.58 1981.19,271.77C2003.22,256.41 2004.00,256.22 2023.50,261.52C2028.45,262.86 2036.10,264.44 2040.50,265.03C2044.90,265.61 2050.53,266.71 2053.00,267.46C2055.47,268.21 2061.32,269.36 2066.00,270.01C2070.68,270.66 2078.55,272.07 2083.50,273.14C2088.45,274.21 2095.88,275.79 2100.00,276.65C2104.12,277.51 2109.53,278.82 2112.00,279.56C2114.47,280.30 2120.10,281.38 2124.50,281.96C2139.60,283.96 2140.10,285.02 2139.76,314.22C2139.45,341.10 2139.77,340.32 2128.50,341.95C2124.65,342.50 2118.36,343.87 2114.52,344.98C2110.68,346.08 2104.60,347.28 2101.02,347.63C2097.43,347.98 2091.12,349.28 2087.00,350.53C2082.88,351.78 2077.03,353.08 2074.00,353.43C2070.97,353.77 2064.45,354.90 2059.50,355.94C2018.95,364.41 2007.59,366.37 2003.52,365.55C2000.19,364.89 1990.62,359.47 1978.23,351.23L1969.96,345.73L1958.73,344.92C1942.72,343.77 1921.14,343.83 1916.78,345.04C1909.70,347.01 1910.00,344.40 1910.00,404.20C1910.00,461.87 1910.26,464.99 1915.12,466.54C1916.18,466.87 1965.07,467.13 2023.77,467.10C2135.83,467.06 2155.81,467.41 2158.65,469.49C2161.53,471.60 2161.26,583.56 2158.37,585.90C2156.32,587.56 1782.90,588.72 1771.02,587.11ZM2222.32,587.01C2217.84,585.17 2217.98,593.79 2217.98,316.89C2217.98,30.89 2217.69,47.16 2222.77,46.92C2245.36,45.82 2359.62,47.25 2361.16,48.64C2362.94,50.25 2363.00,57.49 2363.00,254.04C2363.00,451.68 2363.06,457.85 2364.87,460.09L2366.75,462.40L2461.62,462.73C2513.81,462.91 2562.86,463.04 2570.64,463.03C2590.69,462.99 2589.41,461.36 2589.70,487.15C2590.27,537.10 2588.88,584.99 2586.83,586.09C2584.39,587.40 2225.47,588.30 2222.32,587.01ZM375.11,387.94C376.06,387.43 377.14,385.64 377.51,383.96C378.18,380.91 377.91,379.92 369.86,355.96C368.28,351.27 364.97,339.57 362.51,329.96C357.89,311.92 353.17,295.73 351.01,290.50C350.32,288.85 348.98,284.57 348.02,281.00C340.50,252.96 338.77,246.60 336.89,240.00C335.72,235.88 333.95,230.47 332.96,228.00C331.97,225.53 330.48,220.80 329.64,217.50C324.35,196.70 324.00,195.46 316.70,171.59C314.43,164.19 309.59,164.19 307.28,171.59C306.61,173.74 305.18,179.10 304.11,183.50C303.04,187.90 300.74,196.22 299.00,202.00C297.26,207.78 295.18,215.20 294.38,218.50C293.57,221.80 292.44,225.85 291.86,227.50C291.28,229.15 289.76,234.32 288.48,239.00C284.78,252.45 281.07,264.92 278.50,272.50C277.19,276.35 274.71,285.35 272.98,292.50C271.25,299.65 267.34,314.05 264.30,324.50C258.45,344.62 256.35,352.19 253.50,363.50C252.53,367.35 251.06,372.52 250.24,375.00C247.94,381.93 248.07,387.20 250.56,388.46C253.19,389.78 372.60,389.28 375.11,387.94ZM2533.78,268.94C2530.84,267.22 2530.13,261.21 2530.34,239.83C2530.58,215.48 2530.75,215.00 2539.40,215.00C2565.27,215.00 2579.73,203.47 2580.77,182.00C2581.49,167.30 2581.78,167.50 2559.34,167.50C2539.43,167.49 2537.41,166.98 2536.55,161.74C2536.26,159.96 2536.13,134.32 2536.26,104.78C2536.50,52.05 2536.54,51.02 2538.56,49.00C2541.73,45.83 2648.89,45.45 2652.04,48.59C2655.59,52.15 2655.56,179.76 2652.00,203.42C2645.17,248.85 2612.95,269.96 2550.50,269.94C2542.25,269.94 2534.73,269.49 2533.78,268.94Z"/></svg>
+            <span class="sr">Family-owned auto repair in Goleta, California</span>
+          </h1>
+          <p class="tagline">Honest repairs from a family shop in Goleta.</p>
+          <p class="lede">Angel and his sons, Alan and Angel Jr., fix <strong>all makes and models</strong>, from a quick oil change to a full engine replacement. Teslas and other electric vehicles are welcome too.</p>
+          <div class="actions">
+            <a class="btn btn-amber" href="tel:+18056963860">Call (805) 696-3860</a>
+            <a class="btn btn-light" href="https://app.shopmonkey.cloud/public/scheduler/98df2a84-559d-4298-98f2-6344e3e5e2cd?fullPage=true" target="_blank" rel="noopener">Book online</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=5940+Matthews+St,+Goleta,+CA+93117" target="_blank" rel="noopener">Get directions</a>
+          </div>
+          <ul class="chips">
+            <li>Family-owned since 2016</li>
+            <li>All makes and models</li>
+            <li>Teslas and EVs welcome</li>
+            <li>Se habla español</li>
+          </ul>
+        </div>
+
+        <aside class="sign" aria-labelledby="hours-title">
+          <div class="wingbar inv">
+            <span class="wing l" aria-hidden="true"><i></i><i></i><i></i></span>
+            <h2 id="hours-title" class="txt">Shop hours</h2>
+            <span class="wing r" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="sign-body">
+            <p class="status" aria-live="polite"><span class="dot" id="dot"></span><span id="status">Monday to Friday 8:00 am to 6:30 pm</span></p>
+            <table>
+              <tbody>
+                <tr data-day="1"><th scope="row">Monday</th><td>8:00 am – 6:30 pm</td></tr>
+                <tr data-day="2"><th scope="row">Tuesday</th><td>8:00 am – 6:30 pm</td></tr>
+                <tr data-day="3"><th scope="row">Wednesday</th><td>8:00 am – 6:30 pm</td></tr>
+                <tr data-day="4"><th scope="row">Thursday</th><td>8:00 am – 6:30 pm</td></tr>
+                <tr data-day="5"><th scope="row">Friday</th><td>8:00 am – 6:30 pm</td></tr>
+                <tr data-day="6"><th scope="row">Saturday</th><td>8:00 am – 4:00 pm</td></tr>
+                <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </aside>
+      </div>
+
+      <div class="wingbar">
+        <span class="wing l" aria-hidden="true"><i></i><i></i><i></i></span>
+        <p class="txt">
+          <span>5940 Matthews St</span>
+          <svg class="star" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0 8.6 5.4 14 7 8.6 8.6 7 14 5.4 8.6 0 7 5.4 5.4Z"/></svg>
+          <span>Goleta, CA</span>
+          <svg class="star" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0 8.6 5.4 14 7 8.6 8.6 7 14 5.4 8.6 0 7 5.4 5.4Z"/></svg>
+          <a href="tel:+18056963860">(805) 696-3860</a>
+        </p>
+        <span class="wing r" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2 class="title">No job is too big or too small.</h2>
+      <p class="intro">Routine maintenance or major repair, our team is equipped to handle it. If it drives, we can most likely fix it. Here is what we do most.</p>
+      <ul class="svc-list">
+        <li>Oil changes</li>
+        <li>Scheduled maintenance</li>
+        <li>Brakes and suspension</li>
+        <li>Check engine light diagnosis</li>
+        <li>Electrical repair and batteries</li>
+        <li>Engine repair and replacement</li>
+        <li>Transmission rebuilds</li>
+        <li>Exhaust repair</li>
+        <li>Emissions and safety inspections</li>
+      </ul>
+      <div class="ev">
+        <svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+        <p>Yes, we service Teslas and other electric vehicles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about dark" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow">Our story</p>
+        <h2 class="title">Family-run since 2016.</h2>
+        <p>Angel's Auto Repair started in 2016 as a small, family-owned shop built on trust, hard work, and a passion for quality automotive care. As the community grew with us, we moved into a larger facility to keep up.</p>
+        <p>It is still run by Angel and his two sons, Alan and Angel Jr. When you drop off your car, you deal with the family that fixes it, and you get honest service and personal attention.</p>
+        <p>Our mission is simple: reliable, high-quality repairs at a fair price, so our neighbors stay safe on the road.</p>
+        <blockquote class="note">
+          <p>Cars have always been a big part of our family's life, and that passion drives everything we do.</p>
+          <cite>Alan T., owner</cite>
+        </blockquote>
+      </div>
+      <div class="ratings" id="reviews">
+        <p class="score">
+          <span class="num" id="avg">5.0</span>
+          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+        </p>
+        <p class="basis">Average of <span id="total">66</span> customer reviews across Google, CARFAX, and Yelp.</p>
+        <ul class="sites" id="sites">
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Angel%27s+Auto+Repair%2C+5940+Matthews+St%2C+Goleta%2C+CA+93117" target="_blank" rel="noopener">Google</a><span>5.0 from 53 reviews</span></li>
+          <li><a href="https://www.carfax.com/Reviews-Angels-Auto-Repair-Goleta-CA_PFNCA816M5" target="_blank" rel="noopener">CARFAX</a><span>5.0 from 11 reviews</span></li>
+          <li><a href="https://www.yelp.com/biz/angel-s-auto-repair-goleta" target="_blank" rel="noopener">Yelp</a><span>5.0 from 2 reviews</span></li>
+        </ul>
+        <p class="fine">Ratings updated September 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap">
+      <p class="eyebrow">Book online</p>
+      <h2 class="title">Book your appointment.</h2>
+      <p class="intro">Schedule online instantly through Shopmonkey.<br>If the scheduler below doesn't load, use the button to open it in a new tab.</p>
+      <div class="booking-container">
+        <div class="booking-embed" id="booking-embed">
+          <div class="booking-fallback" id="booking-fallback">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" fill="currentColor"/></svg>
+            <b>Loading scheduler...</b>
+            <span>If this takes more than 10 seconds, the booking system may be unavailable.</span>
+            <a class="btn btn-light btn-sm" href="https://app.shopmonkey.cloud/public/scheduler/98df2a84-559d-4298-98f2-6344e3e5e2cd?fullPage=true" target="_blank" rel="noopener">Open booking page</a>
+          </div>
+        </div>
+        <p class="attrib">Powered by Shopmonkey</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <p class="eyebrow">Visit us</p>
+      <h2 class="title">Come see us on Matthews Street.</h2>
+      <div class="visit-grid">
+        <div>
+          <address>
+            5940 Matthews St<br>
+            Goleta, CA 93117
+          </address>
+          <p class="cross">Near Matthews St and Edward Verhelle Rd / S Fairview Ave</p>
+          <p class="lbl">Call to book or ask a question</p>
+          <a class="phone" href="tel:+18056963860">(805) 696-3860</a>
+          <p>Mon to Fri 8:00 am – 6:30 pm<br>Sat 8:00 am – 4:00 pm<br>Closed Sunday</p>
+          <p class="es">Se habla español.</p>
+        </div>
+        <div>
+          <div class="mapbox" id="mapbox">
+            <div class="mapfallback">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+              <b>Angel's Auto Repair</b>
+              <span>5940 Matthews St, Goleta, CA 93117</span>
+            </div>
+          </div>
+          <p class="attrib" id="attrib">Map data &copy; OpenStreetMap contributors</p>
+          <p class="apps-label">Get directions in your maps app</p>
+          <div class="apps">
+            <a class="btn btn-ink btn-sm" href="https://www.mapquest.com/search/results?query=Angel%27s%20Auto%20Repair%2C%205940%20Matthews%20St%2C%20Goleta%2C%20CA%2093117" target="_blank" rel="noopener">MapQuest</a>
+            <a class="btn btn-line btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=5940+Matthews+St,+Goleta,+CA+93117" target="_blank" rel="noopener">Google Maps</a>
+            <a class="btn btn-line btn-sm" href="https://maps.apple.com/?daddr=5940+Matthews+St,+Goleta,+CA+93117&amp;dirflg=d" target="_blank" rel="noopener">Apple Maps</a>
+            <a class="btn btn-line btn-sm" href="https://waze.com/ul?ll=34.430526,-119.829682&amp;navigate=yes" target="_blank" rel="noopener">Waze</a>
+            <a class="btn btn-line btn-sm" id="other-app" href="geo:34.430526,-119.829682?q=34.430526,-119.829682(Angel%27s%20Auto%20Repair)" hidden>Other maps app</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Angel's Auto Repair</span>
+    <span>5940 Matthews St, Goleta, CA 93117</span>
+    <a class="social" href="https://www.facebook.com/profile.php?id=61569377487013" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.9S15.6 3.6 14.3 3.6c-2.7 0-4.3 1.600-4.3 4.500v2.400H7.200v3.300H10V22h3.500Z"/></svg>
+      Follow us on Facebook
+    </a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Scroll reveal: fade sections in as they enter the viewport
+  var root = document.documentElement;
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  root.classList.add('js');
+  var items = document.querySelectorAll('main section .wrap > *, .svc-list li');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.1 });
+  [].forEach.call(items, function (el, i) {
+    el.classList.add('reveal');
+    if (el.tagName === 'LI') el.style.transitionDelay = (i % 3) * 70 + 'ms';
+    io.observe(el);
+  });
+})();
+
+(function () {
+  // Mobile menu toggle and active-section highlight
+  var btn = document.getElementById('menu-btn'), nav = document.getElementById('nav');
+  function setOpen(open) { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); }
+  btn.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
+  nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  if ('IntersectionObserver' in window) {
+    var links = {};
+    [].forEach.call(nav.querySelectorAll('a'), function (a) { links[a.hash.slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var a = links[en.target.id];
+        if (a) a.classList.toggle('active', en.isIntersecting);
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    Object.keys(links).forEach(function (id) {
+      var el = document.getElementById(id); if (el) io.observe(el);
+    });
+  }
+})();
+
+(function () {
+  // Weekly hours, Pacific time. Values are [open, close] in decimal hours; null = closed.
+  var HOURS = { 0: null, 1: [8, 18.5], 2: [8, 18.5], 3: [8, 18.5], 4: [8, 18.5], 5: [8, 18.5], 6: [8, 16] };
+  var NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+  function fmt(h) {
+    var hr = Math.floor(h), m = Math.round((h - hr) * 60);
+    var suffix = hr >= 12 ? 'pm' : 'am';
+    var h12 = hr % 12 === 0 ? 12 : hr % 12;
+    return h12 + (m ? ':' + (m < 10 ? '0' + m : m) : ':00') + ' ' + suffix;
+  }
+
+  try {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Los_Angeles', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
+    }).formatToParts(new Date());
+    var map = {};
+    parts.forEach(function (p) { map[p.type] = p.value; });
+    var dayIdx = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(map.weekday);
+    var hour = parseInt(map.hour, 10) % 24;
+    var now = hour + parseInt(map.minute, 10) / 60;
+
+    var row = document.querySelector('tr[data-day="' + dayIdx + '"]');
+    if (row) row.className = 'today';
+
+    var today = HOURS[dayIdx];
+    var text, isOpen = false;
+    if (today && now >= today[0] && now < today[1]) {
+      text = 'Open now until ' + fmt(today[1]); isOpen = true;
+    } else if (today && now < today[0]) {
+      text = 'Closed now. Opens today at ' + fmt(today[0]);
+    } else {
+      var next = null;
+      for (var i = 1; i <= 7; i++) {
+        var d = (dayIdx + i) % 7;
+        if (HOURS[d]) { next = { d: d, i: i }; break; }
+      }
+      var when = next.i === 1 ? 'tomorrow' : NAMES[next.d];
+      text = 'Closed now. Opens ' + when + ' at ' + fmt(HOURS[next.d][0]);
+    }
+    document.getElementById('status').textContent = text;
+    if (isOpen) document.getElementById('dot').className = 'dot open';
+  } catch (e) { /* keep the static text */ }
+})();
+
+(function () {
+  // Review snapshot: edit these numbers to update the average shown on the page.
+  var SITES = [
+    { name: 'Google', rating: 5.0, count: 53, url: 'https://www.google.com/maps/search/?api=1&query=Angel%27s+Auto+Repair%2C+5940+Matthews+St%2C+Goleta%2C+CA+93117' },
+    { name: 'CARFAX', rating: 5.0, count: 11, url: 'https://www.carfax.com/Reviews-Angels-Auto-Repair-Goleta-CA_PFNCA816M5' },
+    { name: 'Yelp',   rating: 5.0, count: 2,  url: 'https://www.yelp.com/biz/angel-s-auto-repair-goleta' }
+  ];
+  try {
+    var total = 0, sum = 0;
+    SITES.forEach(function (s) { total += s.count; sum += s.rating * s.count; });
+    document.getElementById('avg').textContent = (sum / total).toFixed(1);
+    document.getElementById('total').textContent = total;
+    var ul = document.getElementById('sites');
+    ul.textContent = '';
+    SITES.forEach(function (s) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = s.name;
+      var sp = document.createElement('span');
+      sp.textContent = s.rating.toFixed(1) + ' from ' + s.count + ' reviews';
+      li.appendChild(a); li.appendChild(sp); ul.appendChild(li);
+    });
+  } catch (e) { /* keep the static markup */ }
+})();
+
+(function () {
+  var box = document.getElementById('mapbox');
+  // "Other maps app" uses a geo: link, which opens an app chooser on Android.
+  if (/Android/i.test(navigator.userAgent)) document.getElementById('other-app').hidden = false;
+  // If the page's security policy blocks the embedded map, drop it and keep the fallback card.
+  document.addEventListener('securitypolicyviolation', function (e) {
+    if (/openstreetmap/i.test(e.blockedURI || '')) {
+      var f = box.querySelector('iframe');
+      if (f) f.remove();
+      document.getElementById('attrib').hidden = true;
+    }
+  });
+  var f = document.createElement('iframe');
+  f.title = "Map showing Angel's Auto Repair at 5940 Matthews St, Goleta";
+  f.loading = 'lazy';
+  f.referrerPolicy = 'no-referrer';
+  f.src = 'https://www.openstreetmap.org/export/embed.html?bbox=-119.8357%2C34.4255%2C-119.8237%2C34.4355&layer=mapnik&marker=34.430526%2C-119.829682';
+  box.appendChild(f);
+})();
+
+(function () {
+  var box = document.getElementById('booking-embed');
+  var f = document.createElement('iframe');
+  f.title = 'Appointment scheduling for Angel\'s Auto Repair';
+  f.loading = 'lazy';
+  f.referrerPolicy = 'no-referrer';
+  f.src = 'https://app.shopmonkey.cloud/public/scheduler/98df2a84-559d-4298-98f2-6344e3e5e2cd?fullPage=true';
+  box.appendChild(f);
+})();
+
+</script>
+
+</body>
+</html>
